@@ -11,6 +11,7 @@ app.post('/webhook', (req, res) => {
     res.sendStatus(200)
 })
 app.listen(port)
+console.log('connecting :');
 function reply(reply_token) {
     let headers = {
         'Content-Type': 'application/json',
@@ -34,4 +35,5 @@ function reply(reply_token) {
     }, (err, res, body) => {
         console.log('status = ' + res.statusCode);
     });
+    
 }
